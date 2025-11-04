@@ -1,50 +1,47 @@
-# Welcome to your Expo app 👋
+# 🟢 Connectly — Google Meet Clone Built with React Native
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Connectly Banner](https://your-image-link-here.com/banner.png)
 
-## Get started
+**Connectly** is a modern video conferencing app built with **React Native**, inspired by **Google Meet**. It allows users to create and join video meetings in real-time, chat during calls, and connect seamlessly — all from their mobile devices.
 
-1. Install dependencies
+> 🧠 Built for developers who want to explore real-time communication using WebRTC and React Native.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 📱 Features
 
-   ```bash
-   npx expo start
-   ```
+✅ Real-time video & audio conferencing  
+💬 In-meeting chat  
+🔗 Create & join meetings with unique codes  
+🔒 Secure peer-to-peer connections using WebRTC  
+👥 Host & participant management  
+🌐 Cross-platform (Android + iOS)  
+🎨 Modern UI with smooth transitions and dark mode  
+⚡ Optimized for performance & low-latency streaming
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🧩 Tech Stack
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+| Layer                | Technology                                          |
+| -------------------- | --------------------------------------------------- |
+| **Frontend**         | React Native, TypeScript, React Navigation          |
+| **Video SDK**        | WebRTC / Jitsi Meet API / Agora SDK                 |
+| **State Management** | Redux / Zustand / Recoil                            |
+| **Backend**          | Node.js / Express / Firebase                        |
+| **Authentication**   | Firebase Auth / JWT                                 |
+| **Database**         | Firestore / MongoDB                                 |
+| **UI Components**    | React Native Paper / NativeWind / Styled Components |
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🏗️ Project Setup
+
+Follow these steps to set up **Connectly** locally:
+
+### 1. Clone the repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/yourusername/Connectly.git
+cd Connectly
 ```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
