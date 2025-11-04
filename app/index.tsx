@@ -1,7 +1,10 @@
+import { Link } from "expo-router";
+import { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
+  const [signInMode, setSignInMode] = useState<"" | "email" | "google">("");
   return (
     <SafeAreaView className="flex-1 p-4">
       <View className="items-center justify-center flex-1">
@@ -14,12 +17,22 @@ export default function Index() {
           <Text className="text-lg">Seamless connections, anywhere</Text>
         </View>
         <View className="justify-self-end gap-4 w-full">
-          <TouchableOpacity className="items-center justify-center p-4 bg-blue-200 rounded-full">
-            <Text className="font-semibold">Sign in with Google</Text>
-          </TouchableOpacity>
-          <TouchableOpacity className="items-center justify-center p-4 bg-blue-200 rounded-full">
-            <Text className="font-semibold">Sign in with Email</Text>
-          </TouchableOpacity>
+          <Link asChild href="/onboarding/email/sign-in">
+            <TouchableOpacity
+              onPress={() => setSignInMode("google")}
+              className="items-center w-full justify-center p-4 bg-blue-200 rounded-full"
+            >
+              <Text className="font-semibold">Sign in with Google</Text>
+            </TouchableOpacity>
+          </Link>
+          <Link asChild href="/onboarding/email/sign-in">
+            <TouchableOpacity
+              onPress={() => setSignInMode("email")}
+              className="items-center w-full justify-center p-4 bg-blue-200 rounded-full"
+            >
+              <Text className="font-semibold">Sign in with Email</Text>
+            </TouchableOpacity>
+          </Link>
         </View>
       </View>
     </SafeAreaView>
