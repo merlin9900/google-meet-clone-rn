@@ -8,7 +8,7 @@ const EmailSignUp = () => {
   return (
     <SafeAreaView className="flex-1 p-4 items-center justify-center gap-4">
       <View className="flex-row items-center gap-2">
-        <View className="bg-blue-500 size-14 rounded-2xl"></View>
+        <View className="bg-primary-500 size-14 rounded-2xl"></View>
         <Text className="font-bold text-2xl">Connectly</Text>
       </View>
       <Text className="text-3xl font-bold text-left self-start">
@@ -30,7 +30,7 @@ const EmailSignUp = () => {
           label={"Confirm Password"}
         />
       </View>
-      <TouchableOpacity className="items-center w-full justify-center p-4 bg-blue-200 rounded-full">
+      <TouchableOpacity className="items-center w-full justify-center p-4 bg-primary-500 rounded-full">
         <Text className="font-semibold">Create Account</Text>
       </TouchableOpacity>
       <Text>
