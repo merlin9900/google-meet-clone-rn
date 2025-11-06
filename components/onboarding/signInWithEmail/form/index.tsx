@@ -7,7 +7,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 const SignInWithEmailForm = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const { login } = useLogin();
+  const { login, isPending } = useLogin();
 
   const submit = () => {
     login({
@@ -32,6 +32,8 @@ const SignInWithEmailForm = () => {
         <Input
           onChangeText={setEmail}
           placeholder="you.example.com"
+          keyboardType="email-address"
+          autoCapitalize="none"
           label={"Email"}
         />
         <Input
@@ -45,13 +47,14 @@ const SignInWithEmailForm = () => {
         </Link>
       </View>
       <TouchableOpacity
+        disabled={isPending}
         onPress={submit}
         className="items-center w-full justify-center p-4 bg-primary-500 rounded-full"
       >
         <Text className="font-semibold">Sign In</Text>
       </TouchableOpacity>
       <Text>
-        Don't have an account?{" "}
+        Don&apos;t have an account?{" "}
         <Link className="font-semibold " href="/onboarding/email/sign-up">
           Sign Up
         </Link>

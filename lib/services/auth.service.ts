@@ -1,11 +1,11 @@
 import { AxiosError, AxiosResponse } from "axios";
 import { AxiosConfig } from "../config/axios";
-import { LoginInput } from "../schema/auth.schema";
+import { LoginInput, RegisterInput } from "../schema/auth.schema";
 
 export class AuthService {
   private static handleResponse(response: AxiosResponse): void {
-    console.log(`Received response from ${response.config.url}`);
-    console.log("Response data:", response.data);
+    // console.log(`Received response from ${response.config.url}`);
+    // console.log("Response data:", response.data);
   }
 
   private static handleError(error: AxiosError): void {
@@ -23,6 +23,11 @@ export class AuthService {
 
   static async login(payload: LoginInput) {
     const response = await this.client.post("/api/auth/login/", payload);
-    return response.data;
+    return response.data.data;
+  }
+
+  static async register(payload: RegisterInput) {
+    const response = await this.client.post("/api/auth/register/", payload);
+    return response.data.data;
   }
 }
